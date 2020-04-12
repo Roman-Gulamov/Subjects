@@ -1,6 +1,6 @@
 {
   "name": "brackets",
-  "version": "1.0.0",
+  "version": "1.9.0",
   "description": "My first project",
   "main": "index.js",
   "scripts": {
