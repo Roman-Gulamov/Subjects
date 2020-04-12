@@ -1,0 +1,758 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  color: rgba(85, 85, 85, 0.8);
+  padding: 0;
+  margin: 0;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 2.1fr 6fr 3fr;
+  grid-template-areas: "header__logo header__menu header__menu" ".            header__title  .";
+  width: 100%;
+  height: 100vh;
+  background: url(../img/header/1.png) center no-repeat;
+  background-size: cover;
+  padding-top: 40px;
+}
+.header__logo {
+  grid-area: header__logo;
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 700;
+  margin-left: 100px;
+}
+.header__menu {
+  grid-area: header__menu;
+  text-align: right;
+  margin-right: 100px;
+}
+.header__menu__text {
+  color: #ffffff;
+  padding-right: 29px;
+  text-decoration: none;
+  font-size: 14px;
+  letter-spacing: 0.35px;
+}
+.header__menu__text:hover {
+  text-decoration: underline;
+  color: rgba(24, 240, 171, 0.9);
+  transition: all 0.25s ease-in-out;
+}
+.header__menu__text:last-child {
+  padding-right: 0;
+}
+.header__main {
+  grid-area: header__title;
+  font-family: "Roboto Slab", serif;
+  color: #ffffff;
+  padding: 0px 0px 40px 115px;
+  margin-top: 100px;
+  text-align: center;
+}
+.header__main__title {
+  font-size: 50px;
+  font-weight: 400;
+  padding: 18px 0px 30px 0px;
+  text-transform: uppercase;
+}
+.header__main__subtitle {
+  font-size: 20px;
+  font-weight: 400;
+}
+.header__main__button {
+  padding-top: 55px;
+}
+.header .button {
+  color: #ffffff;
+  font-size: 16px;
+  padding: 13px 28px 13px 32px;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+}
+.header .button:hover {
+  background: rgba(104, 31, 25, 0.7);
+  text-decoration: underline;
+  color: rgba(24, 240, 171, 0.7);
+  transition: all 0.3s ease-out;
+}
+
+.services {
+  display: grid;
+  grid-template-columns: 1fr 3fr 3fr 3fr 1fr;
+  grid-template-areas: ". services__main services__main services__main ." ".services__first services__second services__third .";
+  grid-gap: 40px;
+}
+.services__main {
+  grid-area: services__main;
+  text-align: center;
+}
+.services__main__title {
+  font-size: 20px;
+  padding-top: 99px;
+  text-transform: uppercase;
+}
+.services__main__title:after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 2px;
+  margin: 29px 0px 28px 490px;
+  background-color: rgba(85, 85, 85, 0.8);
+}
+.services__main__subtitle {
+  font-size: 16px;
+  font-family: "Roboto Slab", serif;
+  font-weight: 400;
+  padding-bottom: 50px;
+}
+.services__first {
+  grid-area: services__first;
+  text-align: center;
+}
+.services__second {
+  grid-area: services__second;
+  text-align: center;
+}
+.services__third {
+  grid-area: services__third;
+  text-align: center;
+}
+.services__logo {
+  width: 90px;
+  height: 90px;
+}
+.services__title {
+  font-size: 14px;
+  text-transform: uppercase;
+  padding: 24px 0px 24px 0px;
+}
+.services__description {
+  font-family: "Roboto Slab", serif;
+  font-size: 14px;
+  font-weight: 400;
+  padding-bottom: 100px;
+}
+
+.about {
+  display: grid;
+  background: #f8f8f8;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas: ". . about__main about__main . ." ". about__first about__first about__second about__second ." ". about__khalil about__rubel about__shamim about__jonh .";
+  grid-gap: 30px;
+}
+.about__main {
+  grid-area: about__main;
+  text-align: center;
+}
+.about__main__title {
+  font-size: 20px;
+  padding-top: 99px;
+  text-transform: uppercase;
+}
+.about__main__title:after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 2px;
+  margin: 29px 0px 28px 254px;
+  background-color: rgba(85, 85, 85, 0.8);
+}
+.about__main__subtitle {
+  font-size: 16px;
+  font-family: "Roboto Slab", serif;
+  font-weight: 400;
+  padding-bottom: 50px;
+}
+.about__first {
+  grid-area: about__first;
+}
+.about__second {
+  grid-area: about__second;
+}
+.about__description {
+  font-family: "Roboto Slab", serif;
+  font-size: 14px;
+  font-weight: 400;
+  padding-bottom: 40px;
+}
+.about__khalil {
+  grid-area: about__khalil;
+  text-align: center;
+}
+.about__rubel {
+  grid-area: about__rubel;
+  text-align: center;
+}
+.about__shamim {
+  grid-area: about__shamim;
+  text-align: center;
+}
+.about__jonh {
+  grid-area: about__jonh;
+  text-align: center;
+}
+.about__logo {
+  position: relative;
+}
+.about__link {
+  position: absolute;
+  top: 0;
+  width: 263px;
+  height: 250px;
+  opacity: 0;
+  background-image: url(../img/About/bg.svg);
+  transition: all 0.3s ease-out;
+}
+.about__link:hover {
+  opacity: 1;
+}
+.about__link__wrapper {
+  position: absolute;
+  top: 78%;
+  left: 27%;
+}
+.about__link__social {
+  padding: 7px 5px 5px 5px;
+}
+.about__link__social:hover {
+  background-color: #c0301c;
+  transition: all 0.4s ease-out;
+}
+.about__link__img {
+  width: 17px;
+  height: 16px;
+  transition: all 0.3s ease-out;
+}
+.about__title {
+  font-size: 14px;
+  text-transform: uppercase;
+  padding: 20px 0px 10px 0px;
+}
+.about__position {
+  font-family: "Roboto Slab", serif;
+  font-size: 13px;
+  font-weight: 400;
+  padding-bottom: 100px;
+}
+
+.works {
+  display: grid;
+  background: #ffffff;
+  grid-template-columns: 1fr 2fr 2fr 2fr 1fr;
+  grid-template-areas: ". works__main works__main works__main ." ". first second third ." ". fourth fifth sixth ." ". seventh eighth ninth .";
+  grid-gap: 30px;
+}
+.works__main {
+  grid-area: works__main;
+  text-align: center;
+}
+.works__main__title {
+  font-size: 20px;
+  padding-top: 99px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+.works__main__title:after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 2px;
+  margin: 29px 0px 28px 543px;
+  background-color: rgba(85, 85, 85, 0.8);
+}
+.works__menu {
+  font-size: 16px;
+  font-family: "Roboto Slab", serif;
+  font-weight: 400;
+  padding-bottom: 50px;
+}
+.works__menu__text {
+  color: rgba(85, 85, 85, 0.8);
+  padding-right: 29px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: all 0.2s ease-in-out;
+}
+.works__menu__text:hover {
+  color: #c0301c;
+}
+.works__gallery__first {
+  grid-area: first;
+  position: relative;
+}
+.works__gallery__second {
+  grid-area: second;
+  position: relative;
+}
+.works__gallery__third {
+  grid-area: third;
+  position: relative;
+}
+.works__gallery__fourth {
+  grid-area: fourth;
+  position: relative;
+}
+.works__gallery__fifth {
+  grid-area: fifth;
+  position: relative;
+}
+.works__gallery__sixth {
+  grid-area: sixth;
+  position: relative;
+}
+.works__gallery__seventh {
+  grid-area: seventh;
+  position: relative;
+}
+.works__gallery__eighth {
+  grid-area: eighth;
+  position: relative;
+}
+.works__gallery__ninth {
+  grid-area: ninth;
+  position: relative;
+}
+.works__link {
+  position: absolute;
+  top: 0;
+  width: 360px;
+  height: 320px;
+  opacity: 0;
+  background-image: url(../img/Works/bg.svg);
+  transition: all 0.3s ease-out;
+}
+.works__link:hover {
+  opacity: 1;
+}
+.works__link__wrapper {
+  position: absolute;
+  color: #ffffff;
+  top: 32%;
+  left: 35%;
+  text-align: center;
+}
+.works__link__title {
+  font-size: 18px;
+}
+.works__link__subtitle {
+  padding: 5px 0px 25px 0px;
+  font-size: 12px;
+}
+.works__link__button {
+  padding: 10px 22px;
+  background-color: #ffffff;
+  color: #c0301c;
+  border: none;
+  font: inherit;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 1.4px;
+  cursor: pointer;
+}
+.works__link__button:active {
+  transform: translateY(1px);
+}
+
+.project {
+  display: grid;
+  background: url(../img/Project/bg.jpg) center no-repeat;
+  background-size: cover;
+  grid-template-columns: 2.3fr 3fr 2.3fr;
+  grid-template-areas: ". . . " ". project__main .";
+  width: auto;
+  height: 369px;
+  margin-top: 100px;
+}
+.project__main {
+  grid-area: project__main;
+  font-family: "Roboto Slab", serif;
+  color: #ffffff;
+  margin: 0;
+  text-align: center;
+}
+.project__main__title {
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 44px;
+}
+.project__main__button {
+  padding-top: 55px;
+}
+.project__main .button {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 400;
+  padding: 11px 27px;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+}
+.project__main .button:hover {
+  background: rgba(192, 48, 28, 0.4);
+  text-decoration: underline;
+  color: rgba(24, 240, 171, 0.7);
+  transition: all 0.3s ease-out;
+}
+.project__span {
+  text-transform: uppercase;
+}
+
+.blog {
+  display: grid;
+  grid-template-columns: 1fr 2fr 3fr 1fr 1fr;
+  grid-template-areas: ". blog__main blog__main blog__main ." ". blog__first blog__second blog__second ." ". blog__first blog__third blog__third ." ". blog__first blog__third blog__third .";
+  grid-gap: 40px;
+}
+.blog__main {
+  grid-area: blog__main;
+  text-align: center;
+}
+.blog__main__title {
+  font-size: 20px;
+  padding-top: 95px;
+  text-transform: uppercase;
+}
+.blog__main__title:after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 2px;
+  margin: 29px 0px 28px 478px;
+  background-color: rgba(85, 85, 85, 0.8);
+}
+.blog__main__subtitle {
+  font-size: 16px;
+  font-family: "Roboto Slab", serif;
+  font-weight: 400;
+  padding-bottom: 30px;
+}
+.blog__first {
+  grid-area: blog__first;
+}
+.blog__second {
+  grid-area: blog__second;
+}
+.blog__second__date {
+  display: inline-block;
+  line-height: 20px;
+  border: 2px solid rgba(85, 85, 85, 0.8);
+  padding: 14px 17px 12px 18px;
+  color: #777777;
+  font-size: 24px;
+  letter-spacing: 2.4px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.blog__second__oct {
+  font-size: 14px;
+  letter-spacing: 1.4px;
+}
+.blog__second__description {
+  display: inline-block;
+  margin-left: 28px;
+}
+.blog__second__title {
+  color: #c0301c;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+.blog__second__subtitle {
+  color: #777777;
+  font-family: "Roboto Slab", serif;
+  font-size: 13px;
+  font-style: italic;
+  font-weight: 400;
+}
+.blog__second__span {
+  color: #c0301c;
+}
+.blog__third {
+  grid-area: blog__third;
+  margin-top: -30px;
+}
+.blog__third__title {
+  font-family: "Roboto Slab", serif;
+  font-size: 14px;
+  font-weight: 400;
+  padding-bottom: 24px;
+}
+.blog__third__subtitle {
+  font-size: 14px;
+  text-decoration: none;
+  font-family: "Roboto Slab", serif;
+  color: #777777;
+  letter-spacing: 1.3px;
+  text-transform: uppercase;
+}
+.blog__third__subtitle:hover {
+  color: #c0301c;
+  text-decoration: underline;
+  transition: all 0.25s ease-in-out;
+}
+.blog__hr {
+  width: 1005px;
+  margin: 30px 156px 0px 156px;
+  height: 1px;
+  background-color: #dddddd;
+  opacity: 0.4;
+}
+
+.clients {
+  display: grid;
+  background: #f8f8f8;
+  margin-top: 100px;
+  padding-top: 100px;
+  grid-template-columns: 1.5fr 1.1fr 1fr 1fr 1fr 1fr 1.5fr;
+  grid-template-areas: ". clients__first clients__second clients__third clients__fourth clients__fifth ." ". clients__main clients__main clients__main clients__main clients__main ." ". . clients__slider clients__slider clients__slider . .";
+  grid-gap: 70px 45px;
+}
+.clients__first {
+  grid-area: clients__first;
+}
+.clients__second {
+  grid-area: clients__second;
+}
+.clients__third {
+  grid-area: clients__third;
+}
+.clients__fourth {
+  grid-area: clients__fourth;
+  text-align: center;
+}
+.clients__fifth {
+  grid-area: clients__fifth;
+}
+.clients__main {
+  text-align: center;
+  grid-area: clients__main;
+  font-family: "Roboto Slab", serif;
+  font-weight: 400;
+}
+.clients__main__title {
+  font-size: 18px;
+  line-height: 30px;
+  font-style: italic;
+}
+.clients__main__subtitle {
+  padding-top: 35px;
+  font-size: 20px;
+}
+.clients__slider {
+  grid-area: clients__slider;
+  margin-top: -35px;
+  padding-bottom: 40px;
+  text-align: center;
+}
+.clients__slider__first {
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  background: #dddddd;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+}
+.clients__slider__first:hover {
+  background: #c0301c;
+  transition: all 0.25s ease-in-out;
+}
+.clients__slider__second {
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  background: #dddddd;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+}
+.clients__slider__second:hover {
+  background: #c0301c;
+  transition: all 0.25s ease-in-out;
+}
+.clients__slider__third {
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  background: #dddddd;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+}
+.clients__slider__third:hover {
+  background: #c0301c;
+  transition: all 0.4s ease-in-out;
+}
+
+.contact {
+  display: grid;
+  grid-template-columns: 1fr 1fr 0.5fr 2fr 2fr 1fr;
+  grid-template-areas: "contact__main contact__main contact__main contact__main contact__main contact__main" ". contact__first . contact__name contact__mail ." ". contact__first . contact__subject contact__company ." ". contact__second . contact__message contact__message ." ". contact__third . contact__message contact__message ." ". contact__third . contact__send contact__send  ." ". . . contact__send contact__send  .";
+  grid-gap: 30px;
+}
+.contact__main {
+  grid-area: contact__main;
+  text-align: center;
+}
+.contact__main__title {
+  font-size: 20px;
+  padding-top: 95px;
+  text-transform: uppercase;
+}
+.contact__main__title:after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 2px;
+  margin: 29px 0px 28px 635px;
+  background-color: rgba(85, 85, 85, 0.8);
+}
+.contact__main__subtitle {
+  font-size: 16px;
+  font-family: "Roboto Slab", serif;
+  font-weight: 400;
+  padding-bottom: 50px;
+}
+.contact__first {
+  grid-area: contact__first;
+}
+.contact__second {
+  grid-area: contact__second;
+}
+.contact__third {
+  grid-area: contact__third;
+}
+.contact__name {
+  grid-area: contact__name;
+}
+.contact__mail {
+  grid-area: contact__mail;
+}
+.contact__subject {
+  grid-area: contact__subject;
+}
+.contact__company {
+  grid-area: contact__company;
+}
+.contact__message {
+  grid-area: contact__message;
+}
+.contact__message__textarea {
+  width: 622px;
+  height: 125px;
+  overflow: auto;
+  resize: none;
+  color: rgba(85, 85, 85, 0.8);
+  outline: 1px solid rgba(85, 85, 85, 0.8);
+  padding: 17px;
+  text-transform: uppercase;
+}
+.contact__message__textarea:focus {
+  outline: 1px solid #c0301c;
+}
+.contact__input {
+  width: 285px;
+  height: 44px;
+  font-family: "Roboto Slab", serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  padding: 17px;
+  outline: 1px solid rgba(85, 85, 85, 0.8);
+}
+.contact__input:focus {
+  outline: 1px solid #c0301c;
+}
+.contact__send {
+  grid-area: contact__send;
+}
+.contact__send__button {
+  width: 170px;
+  height: 44px;
+  border: 1px solid rgba(85, 85, 85, 0.8);
+  background: #ffffff;
+  color: rgba(85, 85, 85, 0.8);
+  cursor: pointer;
+  text-transform: uppercase;
+}
+.contact__send__button:hover {
+  background-color: #dddddd;
+  transition: all 0.4s ease-out;
+}
+.contact__send__button:active {
+  transform: translateY(1px);
+}
+.contact__send__notation {
+  display: inline-block;
+  font-size: 12px;
+  margin-left: 25px;
+}
+.contact__note {
+  color: #c0301c;
+}
+.contact__title {
+  display: inline-block;
+  margin-left: 7px;
+  font-size: 14px;
+  text-transform: uppercase;
+  padding-bottom: 10px;
+}
+.contact__description {
+  font-family: "Roboto Slab", serif;
+  margin-left: 25px;
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: 2fr 1.3fr 2fr;
+  grid-template-rows: 100px 120px 100px;
+  grid-template-areas: ". . ." ". footer__main ." ". . .";
+  background: url(../img/Footer/bg.png) center no-repeat;
+  background-size: cover;
+  width: auto;
+  height: 307px;
+  margin-top: 100px;
+}
+.footer__main {
+  grid-area: footer__main;
+  text-align: center;
+}
+.footer__main__logo:after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 2px;
+  margin: 29px 0px 28px 133px;
+  background-color: #ffffff;
+}
+.footer__main__social {
+  border: 2px solid #ffffff;
+  border-radius: 25px;
+  padding: 8px 10px;
+  margin-right: 14px;
+}
+.footer__main__social:hover {
+  background-color: rgba(0, 240, 80, 0.5);
+  transition: all 0.4s ease-out;
+}
+.footer__main__subtitle {
+  font-size: 12px;
+  font-weight: 400;
+  font-family: "Roboto Slab", serif;
+  color: #ffffff;
+  text-transform: uppercase;
+}
