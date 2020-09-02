@@ -1,0 +1,83 @@
+.list {
+    width: 100%;
+
+    &-title {
+        color: rgb(236, 34, 34);
+        padding: 30px 0px;
+        text-align: center;
+    }
+
+    &-districts {
+        & > div:first-child {
+            @media all and (max-width: 692px) {
+                height: 100px;
+                flex-direction: column;
+            }
+
+            & a {
+                color: #044fa0;
+                padding-right: 5px;
+                transition: all 0.3s ease;
+        
+                &:hover {
+                    color: #007bff;
+                }
+            } 
+        }
+    } // .list-districts
+} // .list
+
+.districts {
+    max-width: 880px;
+    height: 895px;
+    margin: 30px auto;
+    padding: 40px 20px 40px 40px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0px 5px 11px rgba(0, 0, 0, 0.15);
+
+    &-wrapper {
+        max-height: 770px;
+        overflow-x: hidden;
+        overflow-y: auto;
+    
+        &::-webkit-scrollbar { 
+            width: 8px;
+        }
+    
+        &::-webkit-scrollbar-track-piece { 
+            background: #E7E7E7;
+            border-radius: 23px;
+        }
+    
+        &::-webkit-scrollbar-thumb { 
+            background-color: #1157A7;
+            height: 10px;
+            border-radius: 23px;
+        }
+    }
+
+    &-item {
+        &:after {
+            content: '';
+            display: block;
+            width: 100%;
+            max-width: 800px;
+            height: 1px;
+            background: rgba(135, 135, 135, 0.2);
+            border-radius: 8px;
+            margin: 20px 0px;
+        }
+    }
+
+    &-subject {
+        vertical-align: baseline;
+        cursor: pointer;
+        font-size: 19px;
+        transition: all 0.4s ease;
+
+        &:hover {
+            color: #1157A7;
+        }
+    } // .districts-item
+} // .districts
