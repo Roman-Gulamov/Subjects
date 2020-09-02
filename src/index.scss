@@ -1,5 +1,7 @@
 *, *:before, *:after {
-	box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: "Russo One", sans-serif;
+    letter-spacing: 0.3px;
 }
 
 html, body, div, span, applet, object, iframe,
@@ -25,14 +27,26 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 
-body {
-    font-family: Roboto !important;
-    color: #424242 !important;
-	line-height: 22px !important;
-}
-
 ol, ul {
 	list-style: none;
+}
+
+body {
+    position: relative;
+    
+    &::before {
+        content: ' ';
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: url(./assets/images/FarEast.jpg) no-repeat center center;
+        background-size: cover;
+        background-color: #6b6b6b;
+        will-change: transform;
+        z-index: -1;
+    }
 }
 
 blockquote, q {
