@@ -4,4 +4,4 @@
 
 2. `yarn install`
 
-3. `yarn build`
+3. `yarn start`
