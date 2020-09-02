@@ -1,6 +1,6 @@
 ## Инструкция для старта проекта:
 
-1. `git clone https://github.com/Roman-Gulamov/Startup.git`
+1. `git clone https://github.com/Roman-Gulamov/Subjects.git`
 
 2. `yarn install`
 
