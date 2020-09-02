@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Russo One';
+    font-style: normal;
+    font-weight: 400;
+    src: url('russo-one-v8-latin_cyrillic-regular.eot');
+    src: local('Russo One'), local('RussoOne-Regular'),
+        url('russo-one-v8-latin_cyrillic-regular.eot?#iefix') format('embedded-opentype'),
+        url('russo-one-v8-latin_cyrillic-regular.woff2') format('woff2'),
+        url('russo-one-v8-latin_cyrillic-regular.woff') format('woff'),
+        url('russo-one-v8-latin_cyrillic-regular.ttf') format('truetype'),
+        url('russo-one-v8-latin_cyrillic-regular.svg#RussoOne') format('svg');
+}
