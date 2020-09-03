@@ -1,13 +1,66 @@
-.list {
+@mixin backgroundImage {
+    content: ' ';
+    height: 100%;
     width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #6b6b6b;
+    will-change: transform;
+    z-index: -1;
+}
+
+.choise {
+    position: relative;
+
+    &::before {
+        @include backgroundImage;
+        background: linear-gradient(to right, #e0eafc, #cfdef3);
+    }
+
+    &-text {
+        font-size: 22px;
+    }
+}
+
+.list {
+    position: relative;
+    
+    &-districts {
+        &::before {
+            @include backgroundImage;
+            background: url(../assets/images/FarEast.jpg) no-repeat center center;
+            background-size: cover;
+        }
+    }
+
+    &-branches {
+        &::before {
+            @include backgroundImage;
+            background: url(../assets/images/Branch.jpg) no-repeat center center;
+            background-size: cover;
+        }
+
+        & .list-title {
+            color: black;
+        }
+
+        & .list-links div{
+            justify-content: space-evenly;
+
+            & a::first-line {
+                color: #044fa0;
+            }
+        }
+    } // .list-branches
 
     &-title {
         color: rgb(236, 34, 34);
-        padding: 30px 0px;
+        padding: 20px 0px;
         text-align: center;
     }
 
-    &-districts {
+    &-links {
         & > div:first-child {
             @media all and (max-width: 692px) {
                 height: 100px;
@@ -15,19 +68,19 @@
             }
 
             & a {
-                color: #044fa0;
                 padding-right: 5px;
                 transition: all 0.3s ease;
         
                 &:hover {
-                    color: #007bff;
+                    color: #044fa0;
                 }
             } 
         }
-    } // .list-districts
+    } // .list-links
 } // .list
 
-.districts {
+
+.result {
     max-width: 880px;
     height: 895px;
     margin: 30px auto;
@@ -68,16 +121,16 @@
             border-radius: 8px;
             margin: 20px 0px;
         }
-    }
 
-    &-subject {
-        vertical-align: baseline;
-        cursor: pointer;
-        font-size: 19px;
-        transition: all 0.4s ease;
-
-        &:hover {
-            color: #1157A7;
-        }
+        & a {
+            vertical-align: baseline;
+            cursor: pointer;
+            font-size: 19px;
+            transition: all 0.4s ease;
+    
+            &:hover {
+                color: #1157A7;
+            }
+        } 
     } // .districts-item
 } // .districts
