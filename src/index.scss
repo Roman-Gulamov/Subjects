@@ -31,24 +31,6 @@ ol, ul {
 	list-style: none;
 }
 
-body {
-    position: relative;
-    
-    &::before {
-        content: ' ';
-        height: 100%;
-        width: 100%;
-        position: fixed;
-        top: 0;
-        left: 0;
-        background: url(./assets/images/FarEast.jpg) no-repeat center center;
-        background-size: cover;
-        background-color: #6b6b6b;
-        will-change: transform;
-        z-index: -1;
-    }
-}
-
 blockquote, q {
 	quotes: none;
 }
