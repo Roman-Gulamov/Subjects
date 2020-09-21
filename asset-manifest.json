@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Subjects/static/css/main.3e1b186b.chunk.css",
+    "main.css": "/Subjects/static/css/main.d6edf3c6.chunk.css",
     "main.js": "/Subjects/static/js/main.73207dab.chunk.js",
     "main.js.map": "/Subjects/static/js/main.73207dab.chunk.js.map",
     "runtime-main.js": "/Subjects/static/js/runtime-main.b8cd2b58.js",
@@ -9,10 +9,10 @@
     "static/js/2.9ae0ec96.chunk.js": "/Subjects/static/js/2.9ae0ec96.chunk.js",
     "static/js/2.9ae0ec96.chunk.js.map": "/Subjects/static/js/2.9ae0ec96.chunk.js.map",
     "index.html": "/Subjects/index.html",
-    "precache-manifest.4d8db7b335843e7941a736988c99a16e.js": "/Subjects/precache-manifest.4d8db7b335843e7941a736988c99a16e.js",
+    "precache-manifest.0611c8983af57a8620ff0e0c4fdca0a8.js": "/Subjects/precache-manifest.0611c8983af57a8620ff0e0c4fdca0a8.js",
     "service-worker.js": "/Subjects/service-worker.js",
     "static/css/2.11829350.chunk.css.map": "/Subjects/static/css/2.11829350.chunk.css.map",
-    "static/css/main.3e1b186b.chunk.css.map": "/Subjects/static/css/main.3e1b186b.chunk.css.map",
+    "static/css/main.d6edf3c6.chunk.css.map": "/Subjects/static/css/main.d6edf3c6.chunk.css.map",
     "static/js/2.9ae0ec96.chunk.js.LICENSE.txt": "/Subjects/static/js/2.9ae0ec96.chunk.js.LICENSE.txt",
     "static/media/app.scss": "/Subjects/static/media/FarEast.62962a70.jpg",
     "static/media/stylesheet.css": "/Subjects/static/media/russo-one-v8-latin_cyrillic-regular.f5bd239b.ttf"
@@ -21,7 +21,7 @@
     "static/js/runtime-main.b8cd2b58.js",
     "static/css/2.11829350.chunk.css",
     "static/js/2.9ae0ec96.chunk.js",
-    "static/css/main.3e1b186b.chunk.css",
+    "static/css/main.d6edf3c6.chunk.css",
     "static/js/main.73207dab.chunk.js"
   ]
 }
