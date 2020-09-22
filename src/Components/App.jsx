@@ -10,7 +10,7 @@ export const App = () => {
     return (
         <div className="choise container list-links">
             <Router>
-                <div className="choise-text d-flex justify-content-around flex-wrap pt-4 text-center">
+                <div className="choise-text d-flex justify-content-around flex-wrap text-center">
                     <Link to="/districts" className="text-danger">Округа Российской Федерации</Link>
                     <Link to="/branches" className="text-danger">Филиалы</Link>
                 </div>

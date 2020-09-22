@@ -15,11 +15,13 @@
 
     &::before {
         @include backgroundImage;
-        background: linear-gradient(to right, #e0eafc, #cfdef3);
+        background: linear-gradient(to right, #00d2ff, #928dab);
     }
 
     &-text {
         font-size: 22px;
+        line-height: 1.2;
+        padding-top: 10px;
     }
 }
 
