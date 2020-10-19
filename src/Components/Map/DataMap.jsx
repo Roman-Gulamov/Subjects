@@ -2,13 +2,12 @@
 import React, { useState, useEffect, Fragment } from 'react';
 import Axios from "axios";
 
-import { sortRef } from './ref';
-import { sortData } from './sortData';
 import { checkData, getPageId } from './checkData';
 
 
 export const DataMap = ({ pageTitle }) => {
     const [parseFile, setParseFile] = useState([]);
+    const [sortParseFile, setSortParseFile] = useState([]);
     const [pageId, setPageId] = useState();
     const [error, setError] = useState(false);
 
@@ -21,6 +20,20 @@ export const DataMap = ({ pageTitle }) => {
 
 
     useEffect(() => {
+        setSortParseFile(
+            parseFile
+                .filter(item => item.parent_id === pageId || item.parent_id === null)
+                .map(({ id, parent_id, title, srt }) => ({
+                    id,
+                    parent_id,
+                    title,
+                    srt: parent_id === null ? -1 : srt
+                }))
+                .sort((prev, next) => prev.srt - next.srt)
+        )
+    },[parseFile]);
+
+    useEffect(() => {
         axios
         .get(
             location.split(['/']).indexOf('branches') !== -1 ? 
@@ -31,7 +44,6 @@ export const DataMap = ({ pageTitle }) => {
         .then((response) => {
             setPageId(getPageId(response.data, pageTitle));
             setParseFile(response.data);
-            sortData();
         })
         .catch(() => {
             setError(true);
@@ -42,7 +54,7 @@ export const DataMap = ({ pageTitle }) => {
     if (error) {
         return (
             <div className="result">
-                <div className="result-wrapper" ref={sortRef}>
+                <div className="result-wrapper">
                     <h2 className="text-center">
                         <span role="img" aria-label="cry">&#128547;</span>
                             Ошибка при загрузки
@@ -54,7 +66,7 @@ export const DataMap = ({ pageTitle }) => {
     } else if (!pageTitle) {
         return (
             <div className="result">
-                <div className="result-wrapper" ref={sortRef}>
+                <div className="result-wrapper">
                     <h2 className="text-center">
                         <span role="img" aria-label="cry">&#128557;</span>
                             Не найдено 
@@ -66,10 +78,10 @@ export const DataMap = ({ pageTitle }) => {
     } else {
         return (
             <div className="result">
-                <div className="result-wrapper" ref={sortRef}>
-                    {parseFile.map(data => (
+                <div className="result-wrapper">
+                    {sortParseFile.map(data => (
                         <Fragment key={data.id}>
-                            {checkData(data.parent_id, data.title, pageTitle, pageId, data.srt)}
+                            {checkData(data.parent_id, data.title, pageTitle, data.srt)}
                         </Fragment>
                     ))}
                 </div>
