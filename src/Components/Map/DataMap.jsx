@@ -12,9 +12,6 @@ export const DataMap = ({ pageTitle }) => {
     const [error, setError] = useState(false);
 
     const axios = Axios.create();
-    const header = {
-        header: {'Access-Control-Allow-Origin': 'https://rcslabs.ru/',}
-    }
 
     let location = window.location.href;
 
@@ -38,8 +35,7 @@ export const DataMap = ({ pageTitle }) => {
         .get(
             location.split(['/']).indexOf('branches') !== -1 ? 
                 'https://rcslabs.ru/locations2.json' :
-                'https://rcslabs.ru/locations.json', 
-            header
+                'https://rcslabs.ru/locations.json'
         )
         .then((response) => {
             setPageId(getPageId(response.data, pageTitle));
