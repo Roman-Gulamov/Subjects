@@ -81,7 +81,7 @@ export const SeventhBranch = () => {
         <>
             <Helmet>
                 <meta charSet="utf-8" />
-                <title>Сеьмой филиал</title>
+                <title>Седьмой филиал</title>
             </Helmet>
             <DataMap pageTitle="Филиал №7"/>
         </>
