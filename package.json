@@ -8,7 +8,7 @@
         "url": "git+//https://github.com/Roman-Gulamov/Subjects"
     },
     "dependencies": {
-        "axios": "^0.20.0",
+        "axios": "^0.21.1",
         "bootstrap": "^4.5.2",
         "elliptic": "^6.5.3",
         "gh-pages": "^3.1.0",
